@@ -110,12 +110,15 @@ h1 {
 .logo img {
   padding: 12px 57px 12px 55px;
 
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
 }
 
 .logo:active {
   background-color: #ba2732;
+}
+
+.logo:active.logo::after {
+  background-color: #8d1e26;
 }
 
 .search {
@@ -138,7 +141,7 @@ h1 {
 }
 
 .search input[type="search"]::placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .search-icon {
@@ -167,19 +170,41 @@ input[type="search"]:focus + .search-icon path {
   fill-opacity: 1;
 }
 
-.upper-header a {
-  display: block;
+.order-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 450px;
+}
+
+.order-section a {
   padding: 9px 26px 9px 49px;
 
   box-sizing: border-box;
 
-  width: 150px;
+  width: 33.33%;
 }
 
 .bookmarks,
 .cart {
   text-align: center;
+
+  position: relative;
+}
+
+.order-section .bookmarks {
+  padding: 9px 24px 9px 43px;
+}
+
+.bookmarks:focus-visible,
+.cart:focus-visible,
+.checkout:focus-visible {
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 3px;
+
+  box-shadow: 0 0 20px 11px rgb(0 0 0 / 50%);
 }
 
 .bookmarks:active,
@@ -189,14 +214,33 @@ input[type="search"]:focus + .search-icon path {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.cart-list .checkout {
+.bookmarks:hover .bookmarks-icon path,
+.cart:hover .cart-icon path {
+  fill-opacity: 1;
+}
+
+.order-section .checkout {
   background-color: #63a63e;
 
   padding: 9px 16px 9px 19px;
 }
 
+.checkout:hover {
+  background-color: #5fbb2d;
+}
+
 .checkout:active {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.bookmarks-icon,
+.cart-icon {
+  position: absolute;
+
+  top: 33%;
+  left: 17px;
+
+  fill-opacity: 0.5;
 }
 
 /* middle header*/
