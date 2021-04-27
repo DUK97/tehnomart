@@ -53,6 +53,12 @@ h1 {
   background-color: #ba2732;
 }
 
+.container {
+  margin: 0 auto;
+
+  width: 940px;
+}
+
 /* header */
 .main-header {
   background-image: url(/img/header-bg.png);
@@ -66,6 +72,14 @@ h1 {
 
   background-color: #293449;
 }
+/* wrapper */
+
+.upper-header-wrapper {
+  display: flex;
+  align-items: center;
+
+  height: 42px;
+}
 
 .upper-header a {
   color: #ffffff;
@@ -74,26 +88,93 @@ h1 {
 .logo {
   background-color: #ee3643;
 
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  position: relative;
+
+  /* box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24); */
+}
+
+.logo::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 5px;
+
+  background-color: rgba(181, 41, 51, 1);
+
+  bottom: -5px;
+  right: 0px;
+}
+
+.logo img {
+  padding: 12px 57px 12px 55px;
+
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .logo:active {
   background-color: #ba2732;
 }
 
-.search input[type="text"] {
+.search {
+  display: flex;
+  flex-grow: 1;
+
+  position: relative;
+}
+
+.search input[type="search"] {
   background-color: inherit;
 
   border: none;
+
+  padding: 14px 17px 12px 42px;
+
+  position: relative;
+
+  flex-grow: 1;
 }
-.search input[type="text"]::placeholder {
+
+.search input[type="search"]::placeholder {
   color: #ffffff;
 }
 
-.search input[type="text"]:focus {
+.search-icon {
+  position: absolute;
+
+  top: 33%;
+  left: 17px;
+}
+
+.search-icon path {
+  fill-opacity: 0.5;
+}
+
+.search input[type="search"]:hover + .search-icon path {
+  fill-opacity: 1;
+}
+
+.search input[type="search"]:focus {
   color: #000;
 
   background-color: #fff;
+}
+
+input[type="search"]:focus + .search-icon path {
+  fill: #ee3643;
+  fill-opacity: 1;
+}
+
+.upper-header a {
+  display: block;
+
+  padding: 9px 26px 9px 49px;
+
+  box-sizing: border-box;
+
+  width: 150px;
 }
 
 .bookmarks,
@@ -108,8 +189,10 @@ h1 {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.checkout {
+.cart-list .checkout {
   background-color: #63a63e;
+
+  padding: 9px 16px 9px 19px;
 }
 
 .checkout:active {
