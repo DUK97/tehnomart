@@ -67,6 +67,8 @@ h1 {
   background-color: #f4f7f9;
   background-repeat: repeat;
   background-position: 0 0;
+
+  margin-bottom: 60px;
 }
 /* upper header */
 .upper-header {
@@ -194,7 +196,7 @@ input[type="search"]:focus + .search-icon path {
 }
 
 .order-section .bookmarks {
-  padding: 9px 24px 9px 43px;
+  padding: 9px 24px 9px 42px;
 }
 
 .bookmarks:focus-visible,
@@ -379,6 +381,10 @@ input[type="search"]:focus + .search-icon path {
 
 /* Navigation */
 
+.main-nav {
+  padding-bottom: 60px;
+}
+
 .site-nav {
   display: flex;
   justify-content: space-between;
@@ -415,6 +421,8 @@ input[type="search"]:focus + .search-icon path {
 
 .site-nav a:active {
   color: rgba(255, 255, 255, 0.5);
+
+  background-color: rgba(255, 255, 255, 0.2);
 }
 /* main body */
 
@@ -512,16 +520,64 @@ input[type="search"]:focus + .search-icon path {
 /* features */
 
 .features-list {
+  display: grid;
+  grid-template-areas:
+    "materials tools veachle"
+    "slider slider discount"
+    "slider slider delivery";
+  justify-content: space-between;
+
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 20px 0 20px 22px;
+
+  margin-bottom: 20px;
+
+  width: 300px;
+
+  box-sizing: border-box;
+}
+
+.features-list .features-slider {
+  grid-area: slider;
+
+  display: block;
+
+  padding: 0;
+
+  width: 620px;
+  height: 266px;
+
+  float: left;
 }
 
 .features-list h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+
+  padding-bottom: 14px;
+  margin: 0;
 }
 
 .features-list a {
+  display: block;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 135px;
+
   background-color: rgba(255, 255, 255, 0.35);
 
   font-size: 14px;
@@ -542,28 +598,77 @@ input[type="search"]:focus + .search-icon path {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.features-list svg {
+  position: absolute;
+  top: 24.9%;
+  right: 10.7%;
+}
+
+.features-list .materials-icon {
+  right: 15%;
+}
+
+.features-list .tools-icon {
+  top: 26.9%;
+}
+
+.features-list .discount-icon {
+  top: 20%;
+  right: 15%;
+}
+
 .features-materials {
   background-color: #ffbf47;
+
+  grid-area: materials;
 }
 
 .features-tools {
   background-color: #3bbce3;
+
+  grid-area: tools;
 }
 
 .features-veachle {
   background-color: #dc91d8;
+
+  grid-area: veachle;
 }
 
 .features-discount {
   background-color: #8ed78f;
+
+  grid-area: discount;
 }
 
 .features-delivery {
   background-color: #ffc047;
+
+  grid-area: delivery;
+}
+
+.features-slider figure {
+  margin: 0;
 }
 
 .new {
-  background-color: #ee3643;
+  position: relative;
+
+  /* background-color: #ee3643; */
+
+  /* transform: rotate(45deg); */
+}
+
+.new::after {
+  content: "new";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border-bottom: 84px solid #fd5156;
+  border-left: 39px solid transparent;
+  border-right: 39px solid transparent;
 
   /* transform: rotate(45deg); */
 }
