@@ -278,7 +278,7 @@ input[type="search"]:focus + .search-icon path {
 .header-contacts .contacts-phone {
   display: block;
   position: relative;
-  padding: 7px 45px 8px 74px;
+  padding: 8px 48px 8px 74px;
   border: 3px solid #ffffff;
   text-align: center;
   color: #ee3643;
@@ -302,7 +302,7 @@ input[type="search"]:focus + .search-icon path {
 .location {
   font-size: 14px;
   color: #32425c;
-  margin-right: 13px;
+  margin-right: 16px;
 }
 
 .user-nav {
@@ -570,7 +570,7 @@ input[type="search"]:focus + .search-icon path {
   margin: 0;
 }
 
-.features-list a {
+.features-link {
   display: block;
 
   padding-top: 10px;
@@ -589,12 +589,12 @@ input[type="search"]:focus + .search-icon path {
   text-align: center;
 }
 
-.features-list a:hover,
-.features-list a:focus {
+.features-link:hover,
+.features-link:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.features-list a:active {
+.features-link:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -653,24 +653,90 @@ input[type="search"]:focus + .search-icon path {
 
 .new {
   position: relative;
-
-  /* background-color: #ee3643; */
-
-  /* transform: rotate(45deg); */
 }
 
 .new::after {
-  content: "new";
+  content: "";
 
   position: absolute;
   top: 0;
   right: 0;
 
-  border-bottom: 84px solid #fd5156;
-  border-left: 39px solid transparent;
-  border-right: 39px solid transparent;
+  width: 70px;
+  height: 70px;
 
-  /* transform: rotate(45deg); */
+  background-image: url(/img/new-icon.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.slider {
+  position: relative;
+}
+
+.button-slider-label {
+  position: absolute;
+  top: 115px;
+
+  cursor: pointer;
+}
+
+.button-slider-label-next {
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  border-top: 10px solid #ffffff;
+  border-right: 10px solid #ffffff;
+
+  transform: rotate(45deg);
+
+  z-index: 1;
+}
+
+.button-slider-label-prev {
+  left: 25px;
+}
+
+.slider-button-next {
+  right: 21px;
+}
+
+.slider-slide {
+  position: relative;
+}
+
+.slider-description {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.slider-link {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
+
+  display: block;
+
+  width: 192px;
+
+  box-sizing: border-box;
+
+  padding-top: 11px;
+  padding-bottom: 9px;
+
+  background-color: #ee3643;
+}
+
+.slider-link:hover,
+.slider-link:focus {
+  background-color: #ca2c37;
+}
+
+.slider-link:active {
+  background-color: #ba2732;
 }
 
 .slider h3 {

@@ -171,7 +171,9 @@
         <ul class="features-list">
           <li class="features-materials new">
             <h3>Материалы</h3>
-            <a href="#">На любой вкус</a>
+            <a class="features-link" href="#">
+              <span class="visually-hidden">Материалы </span>На любой вкус</a
+            >
             <svg
               class="materials-icon"
               width="44"
@@ -194,7 +196,9 @@
           </li>
           <li class="features-tools">
             <h3>Инструмент</h3>
-            <a href="#">На все случаи</a>
+            <a class="features-link" href="#">
+              <span class="visually-hidden">Инструмент </span> На все случаи</a
+            >
             <svg
               class="tools-icon"
               width="75"
@@ -213,7 +217,9 @@
           </li>
           <li class="features-veachle">
             <h3>Техника</h3>
-            <a href="#">Для стройки</a>
+            <a class="features-link" href="#"
+              ><span class="visually-hidden">Техника </span> Для стройки</a
+            >
             <svg
               class="veachle-icon"
               width="78"
@@ -239,7 +245,9 @@
 
           <li class="features-discount">
             <h3>Скидки 50%</h3>
-            <a href="#">На 350 товаров</a>
+            <a class="features-link" href="#">
+              <span class="visually-hidden">Скидки 50% </span> На 350 товаров</a
+            >
             <svg
               class="discount-icon"
               width="59"
@@ -270,7 +278,9 @@
           </li>
           <li class="features-delivery">
             <h3>Доставка</h3>
-            <a href="#">Бесплатно </a>
+            <a class="features-link" href="#"
+              ><span class="visually-hidden">Доставка </span>Бесплатно
+            </a>
             <svg
               class="delivery-icon"
               width="78"
@@ -298,27 +308,57 @@
           <li class="features-slider">
             <div class="slider">
               <figure>
-                <div>
+                <label
+                  for="slider-button-prev"
+                  class="button-slider-label button-slider-label-prev"
+                >
+                  <button
+                    class="visually-hidden btn"
+                    id="slider-button-prev"
+                  ></button>
+                </label>
+                <label
+                  for="slider-button-next"
+                  class="button-slider-label button-slider-label-next"
+                  ><button
+                    class="visually-hidden btn"
+                    id="slider-button-next"
+                  ></button
+                ></label>
+                <div class="slider-slide">
                   <img
+                    class="slider-image"
                     src="/img/drill.jpg"
                     width="620"
                     height="266"
                     alt="Дрели Bosch"
                   />
-                  <h3>Дрели</h3>
-                  <p>Соседям на радость!</p>
-                  <a class="red-link" href="#">Открыть каталог</a>
+
+                  <div class="slider-description">
+                    <h3>Дрели</h3>
+                    <span>Соседям на радость!</span>
+                  </div>
+
+                  <a class="features-link slider-link" href="#"
+                    >Открыть каталог</a
+                  >
                 </div>
-                <div style="display: none">
+                <div class="slider-slide" style="display: none">
                   <img
+                    class="slider-image"
                     src="/img/perforator.jpg"
                     width="620"
                     height="266"
                     alt="Перфораторы Bosch"
                   />
-                  <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
-                  <a class="red-link" href="#">Открыть каталог</a>
+                  <div class="slider-description">
+                    <h3>Перфораторы</h3>
+                    <span>Настоящие мужские игрушки</span>
+                  </div>
+
+                  <a class="features-link slider-link" href="#"
+                    >Открыть каталог</a
+                  >
                 </div>
               </figure>
             </div>
@@ -598,5 +638,7 @@
       <!-- Гугл карта -->
       <img src="img/close-map.png" width="21" height="21" alt="Закрыть" />
     </section>
+
+    <script src="/script/script.js"></script>
   </body>
 </html>
