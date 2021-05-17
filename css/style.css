@@ -674,33 +674,31 @@ input[type="search"]:focus + .search-icon path {
   position: relative;
 }
 
-.button-slider-label {
+.slider-btn {
   position: absolute;
-  top: 115px;
-
-  cursor: pointer;
-}
-
-.button-slider-label-next {
-  right: 20px;
+  top: 50%;
 
   width: 60px;
   height: 60px;
 
+  font-size: 50px;
+
   border-top: 10px solid #ffffff;
   border-right: 10px solid #ffffff;
-
-  transform: rotate(45deg);
 
   z-index: 1;
 }
 
-.button-slider-label-prev {
-  left: 25px;
+.slider-btn-prev {
+  transform: rotate(225deg);
+
+  right: 25px;
 }
 
-.slider-button-next {
-  right: 21px;
+.slider-btn-next {
+  transform: rotate(45deg);
+
+  left: 21px;
 }
 
 .slider-slide {
