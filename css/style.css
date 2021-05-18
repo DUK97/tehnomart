@@ -800,6 +800,10 @@ input[type="search"]:focus + .search-icon path {
 /* popular items */
 
 .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: #f9f5f0;
   text-transform: uppercase;
 }
@@ -809,22 +813,35 @@ input[type="search"]:focus + .search-icon path {
   line-height: 30px;
   color: #32425c;
   font-weight: 400;
+
+  padding-left: 28px;
+}
+
+.section-header a {
+  margin-right: 14px;
+  padding: 11px 24px 9px 24px;
 }
 
 .popular-items-list,
 .catalog-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   list-style: none;
+
+  padding: 0;
+  margin: 0;
 
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-.popular-items-list,
-.catalog-item-list li {
-  border: 1px solid #eaeaea;
-}
-
 .popular-item,
 .catalog-item {
+  width: 220px;
+
+  border: 1px solid #eaeaea;
+
   text-align: center;
   line-height: 20px;
 }
@@ -850,16 +867,31 @@ input[type="search"]:focus + .search-icon path {
   font-weight: 700;
 }
 
-.popular-item span,
-.catalog-item span {
+.popular-item-current-price,
+.catalog-item-current-price {
+  position: relative;
+
+  padding: 10px 24px 10px 32px;
+
   color: #ffffff;
   text-align: center;
   font-weight: 700;
 
   background-color: #ee3643;
-  /* background-image: url(/img/red-button.png);
-  background-repeat: no-repeat;
-  background-position: 0 0; */
+
+  width: 124px;
+
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.popular-item-current-price::after {
+  content: "";
+
+  position: absolute;
+  border: 11.7px solid transparent;
+  border-left: 14px solid #ee3643;
 }
 
 /* pagination */
