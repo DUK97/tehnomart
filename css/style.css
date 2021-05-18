@@ -533,7 +533,7 @@ input[type="search"]:focus + .search-icon path {
   padding: 0;
 }
 
-.features-list li {
+.features-list > li {
   display: flex;
   flex-direction: column;
 
@@ -565,8 +565,7 @@ input[type="search"]:focus + .search-icon path {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-
-  padding-bottom: 14px;
+  padding-bottom: 9px;
   margin: 0;
 }
 
@@ -674,35 +673,94 @@ input[type="search"]:focus + .search-icon path {
   position: relative;
 }
 
+.slider-indicators-list {
+  position: absolute;
+  bottom: 40px;
+  left: 48%;
+
+  width: 30px;
+
+  display: flex;
+
+  margin: 0 auto;
+  padding: 0;
+
+  border: 1px red;
+
+  list-style: none;
+
+  z-index: 1;
+}
+
+.slider-indicator {
+  cursor: pointer;
+
+  margin: 0 auto;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 6px;
+
+  background-color: #fff;
+}
+
+.slider-indicator-current {
+  position: relative;
+}
+
+.slider-indicator-current::after {
+  content: "";
+
+  position: absolute;
+  top: 19%;
+  right: 18%;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 4px;
+
+  background-color: red;
+}
+
 .slider-btn {
   position: absolute;
-  top: 50%;
+  top: 46%;
 
-  width: 60px;
-  height: 60px;
+  width: 32px;
+  height: 33px;
+
+  cursor: pointer;
 
   font-size: 50px;
 
-  border-top: 10px solid #ffffff;
-  border-right: 10px solid #ffffff;
+  border: none;
+  border-top: 4px solid #ffffff;
+  border-right: 4px solid #ffffff;
+  background-color: transparent;
 
   z-index: 1;
 }
 
 .slider-btn-prev {
   transform: rotate(225deg);
-
-  right: 25px;
+  left: 30px;
 }
 
 .slider-btn-next {
   transform: rotate(45deg);
-
-  left: 21px;
+  right: 26px;
 }
 
 .slider-slide {
+  display: none;
+
   position: relative;
+}
+
+.slider-slide-current {
+  display: block;
 }
 
 .slider-description {
@@ -713,18 +771,13 @@ input[type="search"]:focus + .search-icon path {
 
 .slider-link {
   position: absolute;
-  bottom: 27px;
+  bottom: 33px;
   left: 24px;
-
   display: block;
-
   width: 192px;
-
   box-sizing: border-box;
-
   padding-top: 11px;
   padding-bottom: 9px;
-
   background-color: #ee3643;
 }
 
