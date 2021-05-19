@@ -519,6 +519,10 @@ input[type="search"]:focus + .search-icon path {
 
 /* features */
 
+.features {
+  margin-bottom: 59px;
+}
+
 .features-list {
   display: grid;
   grid-template-areas:
@@ -806,6 +810,8 @@ input[type="search"]:focus + .search-icon path {
 
   background-color: #f9f5f0;
   text-transform: uppercase;
+
+  margin-bottom: 20px;
 }
 
 .section-header h2 {
@@ -821,12 +827,16 @@ input[type="search"]:focus + .search-icon path {
   margin-right: 14px;
   padding: 11px 24px 9px 24px;
 }
+.popular-items,
+.popular-manufacturers {
+  margin-bottom: 70px;
+}
 
 .popular-items-list,
-.catalog-item-list {
+.catalog-item-list,
+.popular-manufacturers-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   list-style: none;
 
@@ -836,14 +846,46 @@ input[type="search"]:focus + .search-icon path {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
+.popular-items-list,
+.popular-manufacturers-list {
+  margin-bottom: 70px;
+}
+
 .popular-item,
-.catalog-item {
+.catalog-item,
+.popular-manufacturers-item {
+  margin-bottom: 20px;
+  margin-right: 20px;
+
   width: 220px;
 
   border: 1px solid #eaeaea;
 
   text-align: center;
   line-height: 20px;
+
+  box-sizing: border-box;
+}
+
+.popular-item-image,
+.catalog-item-image {
+  margin-bottom: 28px;
+}
+
+.popular-item-link,
+.catalog-item-link {
+  display: block;
+
+  padding-left: 18px;
+  padding-right: 17px;
+
+  margin-bottom: 7px;
+}
+
+.popular-item:nth-child(4n),
+.catalog-item:nth-child(3n),
+.popular-manufacturers-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .popular-item:hover,
@@ -867,11 +909,10 @@ input[type="search"]:focus + .search-icon path {
   font-weight: 700;
 }
 
-.popular-item-current-price,
-.catalog-item-current-price {
+.item-current-price {
   position: relative;
 
-  padding: 10px 24px 10px 32px;
+  padding: 10px 12px 10px 20px;
 
   color: #ffffff;
   text-align: center;
@@ -879,19 +920,23 @@ input[type="search"]:focus + .search-icon path {
 
   background-color: #ee3643;
 
-  width: 124px;
+  width: 123px;
 
   display: block;
   margin: 0 auto;
+  margin-bottom: 21px;
   box-sizing: border-box;
 }
 
-.popular-item-current-price::after {
+.item-current-price::after {
   content: "";
 
   position: absolute;
-  border: 11.7px solid transparent;
-  border-left: 14px solid #ee3643;
+  top: 0;
+  right: -40px;
+
+  border: 20.3px solid transparent;
+  border-left: 21px solid #ee3643;
 }
 
 /* pagination */
@@ -946,20 +991,21 @@ input[type="search"]:focus + .search-icon path {
 
 /* popular manufacturers */
 
-.popular-manufacturers-list {
-  list-style: none;
-}
-
-.popular-manufacturers-list li {
-  border: 1px solid #eaeaea;
-}
-
 .popular-manufacturers-list li:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .popular-manufacturers-list li:active {
   opacity: 0.5;
+}
+
+.manufacturer-link {
+  width: 220px;
+  height: 145px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Servises */
