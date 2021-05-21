@@ -682,9 +682,8 @@ input[type="search"]:focus + .search-icon path {
   bottom: 40px;
   left: 48%;
 
-  width: 30px;
-
   display: flex;
+  flex-wrap: wrap;
 
   margin: 0 auto;
   padding: 0;
@@ -699,7 +698,7 @@ input[type="search"]:focus + .search-icon path {
 .slider-indicator {
   cursor: pointer;
 
-  margin: 0 auto;
+  margin-right: 10px;
 
   width: 11px;
   height: 11px;
@@ -709,8 +708,18 @@ input[type="search"]:focus + .search-icon path {
   background-color: #fff;
 }
 
+/* .slider-indicator:focus .visually-hidden {
+  outline: #3bbce3;
+} */
+
+.slider-indicator:last-child {
+  margin: 0;
+}
+
 .slider-indicator-current {
   position: relative;
+
+  cursor: default;
 }
 
 .slider-indicator-current::after {
