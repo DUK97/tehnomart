@@ -72,7 +72,7 @@ h1 {
   background-repeat: repeat;
   background-position: 0 0;
 
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   padding-bottom: 60px;
 }
@@ -516,6 +516,10 @@ input[type="search"]:focus + .search-icon path {
 /* main body */
 
 /* breadcrumb */
+.breadcrumb {
+  margin-bottom: 50px;
+}
+
 .inner-page {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   color: #000000;
@@ -529,41 +533,103 @@ input[type="search"]:focus + .search-icon path {
   list-style: none;
 
   display: flex;
-  align-items: center;
+  align-items: baseline;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
 }
 
 .breadcrumb-list h5 {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: 400;
+
+  margin: 0;
 }
 
-.breadcrumb-item-home:hover path {
+.breadcrumb-item {
+  position: relative;
+
+  margin-left: 19px;
+  padding-right: 22px;
+}
+
+.breadcrumb-item:first-child {
+  margin-left: 0;
+}
+
+.breadcrumb-item::after {
+  content: "";
+
+  position: absolute;
+  top: 17%;
+  right: 0;
+
+  background-image: url(/img/icon-right-small.svg);
+  width: 8px;
+  height: 12.8px;
+}
+
+.breadcrumb-item:first-child::after {
+  top: 33%;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+.breadcrumb-item-link:hover path,
+.breadcrumb-item-link:focus path {
   fill: #3d546f;
 }
 
 /* inner page heading */
-.inner-page h2 {
+.catalog-heading {
   font-size: 30px;
   line-height: 30px;
-  color: #32425c;
+  color: #0c5576;
   text-transform: uppercase;
 
-  background-color: #f2f6f8;
+  margin: 0;
 }
 
-.item-filter {
+/* catalog-filter  */
+.catalog-filter {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 20px;
+}
+
+.catalog-wrapper {
+  display: flex;
+}
+
+.catalog-items-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-filter-heading .item-filter {
   font-size: 15px;
   line-height: 19px;
   color: #000000;
   text-transform: uppercase;
 }
 
-.item-filter h3 {
+.item-filter-heading {
   font-size: 13px;
   line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
 
   background-color: #f7f3ec;
+
+  margin: 0;
+
+  align-self: center;
 }
 
 .form-item-filter legend {
@@ -583,34 +649,108 @@ input[type="search"]:focus + .search-icon path {
 
 /* sort */
 
-.sort-item {
+.catalog-item-sort {
+  display: flex;
+
+  padding: 10px 17px;
+
   background-color: #f7f3ec;
+}
+
+.sort-wrapper {
+  display: flex;
+
+  margin-left: auto;
 }
 
 .sort-item-list {
   list-style: none;
+
+  display: flex;
+
+  padding: 0;
+  margin: 0;
 }
 
-.sort-item-list li {
+.sort-item {
+  margin-right: 70px;
+}
+
+.sort-item-btn {
+  font-size: 13px;
+  line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 
+  border: none;
   border-bottom: 1px dotted #ee3643;
+
+  background-color: transparent;
+
+  cursor: pointer;
 }
 
-.sort-item-list li:hover {
+.sort-item-btn:hover {
   border-bottom: 1px solid #ee3643;
+
+  color: #000;
 }
 
-.sort-item-list li:active,
-.sort-item-current {
+.sort-item-btn:active,
+.sort-item-current .sort-item-btn {
   color: #ee3643;
 
   border: none;
 }
 
-/* Доделать */
-.sort-item-list-direction button {
+.sort-item-current {
+  cursor: default;
+}
+
+.sort-item-direction {
+  padding-left: 0;
+}
+
+.sort-direction-btn {
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.sort-item-direction:first-child {
+  padding-right: 0;
+  margin-right: 21px;
+}
+
+.sort-direction-up {
+  transform: rotate(180deg);
+}
+
+.sort-item-direction-current .sort-direction-icon path {
+  fill: #ee3643;
+}
+
+.sort-direction-icon {
+  display: block;
+}
+
+.sort-item-direction:hover .sort-direction-icon path,
+.sort-direction-btn:focus .sort-direction-icon {
+  fill: #000;
+}
+
+.sort-item-direction-current:hover .sort-direction-icon path {
+  fill: #ee3643;
+}
+
+.sort-direction-btn:active .sort-direction-icon path {
+  fill: #ee3643;
+}
+
+.sort-item-list-direction {
+  margin-left: 45px;
 }
 
 /* features */
@@ -1586,7 +1726,8 @@ input[type="search"]:focus + .search-icon path {
 }
 
 .footer-nav a:hover,
-.footer-nav a:focus {
+.footer-nav a:focus,
+.breadcrumb-item-link:hover {
   text-decoration-line: underline;
 }
 
